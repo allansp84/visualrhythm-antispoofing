@@ -52,3 +52,22 @@ docs/_build/
 
 # PyBuilder
 target/
+
+#python specific
+*.pyc
+ 
+## generic files to ignore
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
+
+# diretory ignore
+modules/classification/pls_classifiers_old/*
+modules/classification/svm_classifier_old/*
+working*
+results*
+logs*
+testset*
+
