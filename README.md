@@ -28,22 +28,22 @@ First command line remove old binaries, and the second command builds a new bina
 
 This software run only by command line interfaces (CLIs) such as the shell program (e.g., sh, bash, ksh). We provide the following parameters to the users that can be setted by the command line:
 
-* visual_rhythm_type: Indicates the type of visual rhythm to be computed from input video (default=0) **\<required\>**. Use:
+* visual_rhythm_type: Integer between 0 and 2 that indicates the type of visual rhythm to be computed from input video (default=0) **\<required\>**. Use:
     + 0: To compute a vertical visual rhythm;
     + 1: To compute a horizontal visual rhythm;
     + 2: To compute a zig-zag visual rhythm.
-* frame_number: Number of frame considered during computation of the visual rhythm, and the frames are taken in sequence (default=50).
-* color_space: Color space used to load the video frames (default=gray). Use:
+* frame_number: Integer that indicates the number of frames used during computation of the visual rhythm, and that the frames are taken in sequence (default=50).
+* color_space: String that indicates the color space used to load the video frames (default=gray). Use:
     + gray: To load the frames in grayscale;
     + lab: To load the frames in the *L*ab color space;
-* roi_width: Width of the region of interesting extracted of each frames (default=30).
-* filter: Type of filter used to compute the residual noise video from the input video (default=gauss). Use:
+* roi_width: Integer that indicates the width of the region of interesting extracted of each frames (default=30).
+* filter: String that indicates the type of filter used to compute the residual noise video from the input video (default=gauss). Use:
     + gauss to use a gaussian filter;
     + median to use a median filter.
-* kernel_size: Size of the kernel used during filtering from the input video (default=3).
-* variance: Variance of the kernel used during gaussian filtering from the input video (default=2).
-* input_video: File name of the input video to be computed the visual rhythm **\<required\>**.
-* output_image: File name where the extracted visual rhythm will be saved. The visual rhythms are saved as PNG image file **\<required\>**.
+* kernel_size: Integer that indicates the size of the kernel used during filtering from the input video (default=3).
+* variance: Float that indicates the variance of the kernel used during gaussian filtering from the input video (default=2).
+* input_video: String that indicates the file name of the input video to be computed the visual rhythm **\<required\>**.
+* output_image: String that indicates the file name where the extracted visual rhythm will be saved. The visual rhythms are saved as PNG image file **\<required\>**.
 
 > P.S.: The parameters must be pass using a - before the name parameter followed by blanck space and the value to be setted (e.g., -visual_rhythm_type 0, -frame_number 50).
 
