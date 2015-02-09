@@ -1,4 +1,4 @@
-Anti-Spoofing Descriptor based on Visual Rhythm.
+# Anti-Spoofing Descriptor based on Visual Rhythm
 ================================================
 
 ### Brief Description
