@@ -35,8 +35,8 @@ This software run only by command line interfaces (CLIs) such as the shell progr
     + 2: zig-zag
 * frame_number: Number of frame considered during computation of the visual rhythm, and the frames are taken in sequence (default=50).
 * color_space: Color space used to load the video frames (default=gray). Use:
-    + gray to load the frames in grayscale 
-    + lab to load the frames in lab color space
+    + gray to load the frames in *grayscale*
+    + lab to load the frames in the *Lab color space*
 * roi_width: Width of the region of interesting extracted of each frames (default=30).
 * filter: Type of filter used to compute the residual noise video from the input video (default=gauss). Use:
     + gauss to use a gaussian filter
