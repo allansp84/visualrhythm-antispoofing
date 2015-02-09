@@ -1,73 +1,29 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+*.d
 
-# C extensions
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
 *.so
+*.dylib
+*.dll
 
-# Distribution / packaging
-.Python
-env/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-*.egg-info/
-.installed.cfg
-*.egg
+# Fortran module files
+*.mod
 
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
 
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.coverage
-.cache
-nosetests.xml
-coverage.xml
-
-# Translations
-*.mo
-*.pot
-
-# Django stuff:
-*.log
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-target/
-
-#python specific
-*.pyc
- 
-## generic files to ignore
-*~
-*.lock
-*.DS_Store
-*.swp
+# Executables
+*.exe
 *.out
-
-# diretory ignore
-modules/classification/pls_classifiers_old/*
-modules/classification/svm_classifier_old/*
-working*
-results*
-logs*
-testset*
-
+*.app
