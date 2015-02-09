@@ -29,7 +29,7 @@ First command line remove old binaries, and the second command builds a new bina
 
 This software run only by command line interfaces (CLIs) such as the shell program (e.g., sh, bash, ksh). We provide the following parameters to the users that can be setted by the command line:
 
-* visual_rhythm_type: Indicates the type of visual rhythm to be computed from input video (default=0) ** <required> **. Use:
+* visual_rhythm_type: Indicates the type of visual rhythm to be computed from input video (default=0) **<required>**. Use:
     + 0: To compute a vertical visual rhythm;
     + 1: To compute a horizontal visual rhythm;
     + 2: To compute a zig-zag visual rhythm.
@@ -43,8 +43,8 @@ This software run only by command line interfaces (CLIs) such as the shell progr
     + median to use a median filter
 * kernel_size: Size of the kernel used during filtering from the input video (default=3).
 * variance: Variance of the kernel used during gaussian filtering from the input video (default=2).
-* input_video: File name of the input video to be computed the visual rhythm ** <required> **.
-* output_image: File name where the extracted visual rhythm will be saved. The visual rhythms are saved as PNG image file ** <required> **.
+* input_video: File name of the input video to be computed the visual rhythm **<required>**.
+* output_image: File name where the extracted visual rhythm will be saved. The visual rhythms are saved as PNG image file **<required>**.
 
 > P.S.: The parameters must be pass using a - before the name parameter followed by blanck space and the value to be setted (e.g., -visual_rhythm_type 0, -frame_number 50).
 
