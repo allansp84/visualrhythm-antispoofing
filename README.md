@@ -4,10 +4,10 @@ Anti-Spoofing Descriptor based on Visual Rhythm.
 ## Brief description
 This program compute the noise information contained in a input video and their respective spectrum fourier, generating a fourier spectrum video. After, the program compute the visual rhythm from fourier spectrum video, summarizing the most important information for face spoofing detection in a single image, named as visual rhythm.
 
-## Requirements ##
+## Requirements
 The OpenCV Package 2.4.8 or later is required for use this software. This software runs on Linux Operating systems, and we tested it by using Ubuntu 14.04 LTS.
 
-## Compiling and Running ##
+## Compiling and Running this software
 To compile this software the use needs set the variables defined in [opencv.inc](https://github.com/allansp84/visualrhythm-antispoofing/blob/master/Release/opencv.inc):
 
     OPENCVFLAGS = -I/path/to/include/opencv
@@ -25,7 +25,7 @@ After set the variables into ./Release/opencv.inc, the user must be run the foll
 
 First command line remove old binaries, and the second command builds a new binary named as *./Release/VisualRhythmAntiSpoofing*.
 
-## How to use this software? ##
+## How to use this software?
 
 This software run only by command line interfaces (CLIs) such as the shell program (e.g., sh, bash, ksh). We provide the following parameters to the users that can be setted by the command line:
 
@@ -48,7 +48,7 @@ This software run only by command line interfaces (CLIs) such as the shell progr
 
 > P.S.: The parameters must be pass using a - before the name parameter followed by blanck space and the value to be setted (e.g., -visual_rhythm_type 0, -frame_number 50).
 
-## Examples ##
+## Examples
 For run the sofware the user must be the follow parameters:
 
 1. Compute the *__vertical__ visual rhythm* of an input video (data/testcase1.avi) using default value parameters:
@@ -71,7 +71,7 @@ For run the sofware the user must be the follow parameters:
 >     ./Release/VisualRhythmAntiSpoofing -visual_rhythm_type 2 -frame_number 50 -color_space gray -roi_width 30 -filter gauss -kernel_size 3 -variance 2 -input_video data/testcase1.avi -output_image output/visualrhythm/vertical/testcase1.avi
 >     
 
-## Please, Cite our Work! ##
+## Please, Cite our Work!
 If you use this software, please cite our paper published in *IEEE Transactions on Information Forensics and Security*:
 
 > **Reference**
@@ -97,7 +97,7 @@ If you use this software, please cite our paper published in *IEEE Transactions 
 >     doi={10.1109/TIFS.2015.2395139},
 >     ISSN={1556-6013},}
 
-## LICENCE ##
+## LICENSE
 
 This software is available under condition of the New BSD Licence, whose terms are:
 
