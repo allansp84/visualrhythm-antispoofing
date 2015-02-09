@@ -4,10 +4,10 @@ Anti-Spoofing Descriptor based on Visual Rhythm.
 ## Brief Description
 This program compute the noise information contained in a input video and their respective spectrum fourier, generating a fourier spectrum video. After, the program compute the visual rhythm from fourier spectrum video, summarizing the most important information for face spoofing detection in a single image, named as visual rhythm.
 
-## Requirements
+### Requirements
 The OpenCV Package 2.4.8 or later is required for use this software. This software runs on Linux Operating systems, and we tested it by using Ubuntu 14.04 LTS.
 
-## Compiling and Running this Software
+#### Compiling and Running this Software
 To compile this software the use needs set the variables defined in [opencv.inc](https://github.com/allansp84/visualrhythm-antispoofing/blob/master/Release/opencv.inc):
 
     OPENCVFLAGS = -I/path/to/include/opencv
