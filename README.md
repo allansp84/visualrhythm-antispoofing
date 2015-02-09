@@ -38,8 +38,8 @@ This software run only by command line interfaces (CLIs) such as the shell progr
     + lab: To load the frames in the *L*ab color space;
 * roi_width: Width of the region of interesting extracted of each frames (default=30).
 * filter: Type of filter used to compute the residual noise video from the input video (default=gauss). Use:
-    + gauss to use a gaussian filter
-    + median to use a median filter
+    + gauss to use a gaussian filter;
+    + median to use a median filter.
 * kernel_size: Size of the kernel used during filtering from the input video (default=3).
 * variance: Variance of the kernel used during gaussian filtering from the input video (default=2).
 * input_video: File name of the input video to be computed the visual rhythm **\<required\>**.
