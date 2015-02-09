@@ -1,5 +1,5 @@
 # Anti-Spoofing Descriptor based on Visual Rhythm
-================================================
+=================================================
 
 ### Brief Description
 This program compute the noise information contained in a input video and their respective spectrum fourier, generating a fourier spectrum video. After, the program compute the visual rhythm from fourier spectrum video, summarizing the most important information for face spoofing detection in a single image, named as visual rhythm.
