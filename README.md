@@ -30,15 +30,17 @@ First command line remove old binaries, and the second command builds a new bina
 This software run only by command line interfaces (CLIs) such as the shell program (e.g., sh, bash, ksh). We provide the following parameters to the users that can be setted by the command line:
 
 * visual_rhythm_type: Indicates the type of visual rhythm to be computed from input video (default=0). ** <required> **
-	+ 0: vertical
-	+ 1: horizontal
-	+ 2: zig-zag
+    + 0: vertical
+    + 1: horizontal
+    + 2: zig-zag
 * frame_number: Number of frame considered during computation of the visual rhythm, and the frames are taken in sequence (default=50).
-* color_space: Color space used to load the video frames (default=gray).
+* color_space: Color space used to load the video frames (default=gray). Use:
+    + gray to load the frames in grayscale 
+    + lab to load the frames in lab color space
 * roi_width: Width of the region of interesting extracted of each frames (default=30).
 * filter: Type of filter used to compute the residual noise video from the input video (default=gauss). Use:
-	+ gauss for gaussian filter
-	+ median for median filter
+    + gauss to use a gaussian filter
+    + median to use a median filter
 * kernel_size: Size of the kernel used during filtering from the input video (default=3).
 * variance: Variance of the kernel used during gaussian filtering from the input video (default=2).
 * input_video: File name of the input video to be computed the visual rhythm. ** <required> **
