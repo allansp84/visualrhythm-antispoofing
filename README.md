@@ -29,7 +29,7 @@ First command line remove old binaries, and the second command builds a new bina
 
 This software run only by command line interfaces (CLIs) such as the shell program (e.g., sh, bash, ksh). We provide the following parameters to the users that can be setted by the command line:
 
-* visual_rhythm_type: Indicates the type of visual rhythm to be computed from input video (default=0) **<required>**. Use:
+* visual_rhythm_type: Indicates the type of visual rhythm to be computed from input video (default=0) **\<required\>**. Use:
     + 0: To compute a vertical visual rhythm;
     + 1: To compute a horizontal visual rhythm;
     + 2: To compute a zig-zag visual rhythm.
