@@ -56,22 +56,22 @@ For run the sofware the user must be the follow parameters:
 
 1. Compute the *__vertical__ visual rhythm* of an input video (data/testcase1.avi) using default value parameters:
 >     
->     ./Release/VisualRhythmAntiSpoofing -visual_rhythm_type 0 -input_video data/testcase1.avi -output_image output/visualrhythm/vertical/testcase1.avi
+>     ./Release/VisualRhythmAntiSpoofing -visual_rhythm_type 0 -input_video data/testcase1.avi -output_image output/visualrhythm/vertical/testcase1.png
 >     
 
 2. Compute the *__vertical__ visual rhythm* (-visual_rhythm_type 0) from first 2 seconds (-frame_number 50) of an input video (data/testcase2.avi):
 >     
->     ./Release/VisualRhythmAntiSpoofing -visual_rhythm_type 0 -frame_number 50 -color_space gray -roi_width 30 -filter gauss -kernel_size 3 -variance 2 -input_video data/testcase1.avi -output_image output/visualrhythm/vertical/testcase1.avi
+>     ./Release/VisualRhythmAntiSpoofing -visual_rhythm_type 0 -frame_number 50 -color_space gray -roi_width 30 -filter gauss -kernel_size 3 -variance 2 -input_video data/testcase1.avi -output_image output/visualrhythm/vertical/testcase1.png
 >     
 
 3. Compute the *__horizontal__ visual rhythm* (-visual_rhythm_type 1) from first 2 seconds (-frame_number 50) of an input video (data/testcase3.avi):
 >     
->     ./Release/VisualRhythmAntiSpoofing -visual_rhythm_type 1 -frame_number 50 -color_space gray -roi_width 30 -filter gauss -kernel_size 3 -variance 2 -input_video data/testcase2.avi -output_image output/visualrhythm/vertical/testcase2.avi
+>     ./Release/VisualRhythmAntiSpoofing -visual_rhythm_type 1 -frame_number 50 -color_space gray -roi_width 30 -filter gauss -kernel_size 3 -variance 2 -input_video data/testcase2.avi -output_image output/visualrhythm/vertical/testcase2.png
 >     
 
 4. Compute the *__zig-zag__ visual rhythm* (-visual_rhythm_type 2) from first 2 seconds (-frame_number 50) of an input video (data/testcase1.avi):
 >     
->     ./Release/VisualRhythmAntiSpoofing -visual_rhythm_type 2 -frame_number 50 -color_space gray -roi_width 30 -filter gauss -kernel_size 3 -variance 2 -input_video data/testcase1.avi -output_image output/visualrhythm/vertical/testcase1.avi
+>     ./Release/VisualRhythmAntiSpoofing -visual_rhythm_type 2 -frame_number 50 -color_space gray -roi_width 30 -filter gauss -kernel_size 3 -variance 2 -input_video data/testcase1.avi -output_image output/visualrhythm/vertical/testcase1.png
 >     
 
 ### Please, Cite our Work!
