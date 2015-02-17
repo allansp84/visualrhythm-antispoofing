@@ -69,17 +69,17 @@ For run the sofware the user must be the follow parameters:
 
 2. Compute the *__vertical__ visual rhythm* (-visual_rhythm_type 0) from first 2 seconds (-frame_number 50) of an input video (EXAMPLE/data/testcase2.avi):
 >     
->     ./Release/VisualRhythmAntiSpoofing -visual_rhythm_type 0 -frame_number 50 -color_space gray -roi_width 30 -filter gauss -kernel_size 3 -variance 2 -input_video EXAMPLE/data/testcase2.avi -output_image EXAMPLE/output/visualrhythm/vertical/testcase2.png
+>     ./Release/VisualRhythmAntiSpoofing -visual_rhythm_type 0 -frame_number 50 -color_space 0 -roi_width 30 -filter 0 -kernel_size 3 -variance 2 -input_video EXAMPLE/data/testcase2.avi -output_image EXAMPLE/output/visualrhythm/vertical/testcase2.png
 >     
 
 3. Compute the *__horizontal__ visual rhythm* (-visual_rhythm_type 1) from first 2 seconds (-frame_number 50) of an input video (EXAMPLE/data/testcase3.avi):
 >     
->     ./Release/VisualRhythmAntiSpoofing -visual_rhythm_type 1 -frame_number 50 -color_space gray -roi_width 30 -filter gauss -kernel_size 3 -variance 2 -input_video EXAMPLE/data/testcase3.avi -output_image EXAMPLE/output/visualrhythm/vertical/testcase3.png
+>     ./Release/VisualRhythmAntiSpoofing -visual_rhythm_type 1 -frame_number 50 -color_space 0 -roi_width 30 -filter 0 -kernel_size 3 -variance 2 -input_video EXAMPLE/data/testcase3.avi -output_image EXAMPLE/output/visualrhythm/vertical/testcase3.png
 >     
 
 4. Compute the *__zig-zag__ visual rhythm* (-visual_rhythm_type 2) from first 2 seconds (-frame_number 50) of an input video (EXAMPLE/data/testcase1.avi):
 >     
->     ./Release/VisualRhythmAntiSpoofing -visual_rhythm_type 2 -frame_number 50 -color_space gray -roi_width 30 -filter gauss -kernel_size 3 -variance 2 -input_video EXAMPLE/data/testcase1.avi -output_image EXAMPLE/output/visualrhythm/vertical/testcase1.png
+>     ./Release/VisualRhythmAntiSpoofing -visual_rhythm_type 2 -frame_number 50 -color_space 0 -roi_width 30 -filter 0 -kernel_size 3 -variance 2 -input_video EXAMPLE/data/testcase1.avi -output_image EXAMPLE/output/visualrhythm/vertical/testcase1.png
 >     
 
 ### Please, Cite our Work!
