@@ -33,6 +33,14 @@
 #include <sys/stat.h>
 #include <errno.h>
 
+
+bool is_number(const std::string& s)
+{
+    std::string::const_iterator it = s.begin();
+    while (it != s.end() && std::isdigit(*it)) ++it;
+    return !s.empty() && it == s.end();
+}
+
 void compute_visual_rhythm(int color_space, int filter, int frame_number, string input_video,
   int kernel_size, string output_image, int roi_width, float variance, int visual_rhythm_type);
 
@@ -293,7 +301,6 @@ void parse_command_line(int argc, char **argv, int &color_space, int &filter, in
                 cout << "Missing value for parameter " << output_image_pattern;
                 cout << ". See --help." << endl;
                 is_missing_parameter = true;
-
             } else {
                 output_image = string(argv[i]);
             }
@@ -306,9 +313,12 @@ void parse_command_line(int argc, char **argv, int &color_space, int &filter, in
                 cout << "Missing value for parameter " << roi_width_pattern;
                 cout << ". See --help." << endl;
                 is_missing_parameter = true;
-
-            } else {
+            } else if (is_number(argv[i])) {
                 roi_width = atoi(argv[i]);
+            } else {
+                cout << "Missing value for parameter " << kernel_size_pattern;
+                cout << ". See --help." << endl;
+                is_missing_parameter = true;
             }
 
         } else if (kernel_size_pattern.compare(0, kernel_size_pattern.length(), argv[i],
@@ -319,9 +329,12 @@ void parse_command_line(int argc, char **argv, int &color_space, int &filter, in
                 cout << "Missing value for parameter " << kernel_size_pattern;
                 cout << ". See --help." << endl;
                 is_missing_parameter = true;
-
-            } else {
+            } else if (is_number(argv[i])) {
                 kernel_size = atoi(argv[i]);
+            } else {
+                cout << "Missing value for parameter " << kernel_size_pattern;
+                cout << ". See --help." << endl;
+                is_missing_parameter = true;
             }
 
         } else if (variance_pattern.compare(0, variance_pattern.length(), argv[i],
@@ -332,9 +345,12 @@ void parse_command_line(int argc, char **argv, int &color_space, int &filter, in
                 cout << "Missing value for parameter " << variance_pattern;
                 cout << ". See --help." << endl;
                 is_missing_parameter = true;
-
-            } else {
+            } else if (is_number(argv[i])) {
                 variance = atof(argv[i]);
+            } else {
+                cout << "Missing value for parameter " << kernel_size_pattern;
+                cout << ". See --help." << endl;
+                is_missing_parameter = true;
             }
 
         } else if (color_space_pattern.compare(0, color_space_pattern.length(), argv[i],
@@ -342,13 +358,15 @@ void parse_command_line(int argc, char **argv, int &color_space, int &filter, in
 
             i++;
             if ((argv[i]) == NULL) {
-
                 cout << "Missing value for parameter " << color_space_pattern;
                 cout << ". See --help." << endl;
                 is_missing_parameter = true;
-
-            } else {
+            } else if (is_number(argv[i])) {
                 color_space = atoi(argv[i]);
+            } else {
+                cout << "Missing value for parameter " << color_space_pattern;
+                cout << ". See --help." << endl;
+                is_missing_parameter = true;
             }
 
         } else if (visual_rhythm_type_pattern.compare(0, visual_rhythm_type_pattern.length(),
@@ -359,9 +377,12 @@ void parse_command_line(int argc, char **argv, int &color_space, int &filter, in
                 cout << "Missing value for parameter " << visual_rhythm_type_pattern;
                 cout << ". See --help." << endl;
                 is_missing_parameter = true;
-
-            } else {
+            } else if (is_number(argv[i])) {
                 visual_rhythm_type = atoi(argv[i]);
+            } else {
+                cout << "Missing value for parameter " << visual_rhythm_type_pattern;
+                cout << ". See --help." << endl;
+                is_missing_parameter = true;
             }
 
         } else if (frame_number_pattern.compare(0, frame_number_pattern.length(), argv[i],
@@ -372,9 +393,12 @@ void parse_command_line(int argc, char **argv, int &color_space, int &filter, in
                 cout << "Missing value for parameter " << frame_number_pattern;
                 cout << ". See --help." << endl;
                 is_missing_parameter = true;
-
-            } else {
+            } else if (is_number(argv[i])) {
                 frame_number = atoi(argv[i]);
+            } else {
+                cout << "Missing value for parameter " << frame_number_pattern;
+                cout << ". See --help." << endl;
+                is_missing_parameter = true;
             }
 
         } else if (filter_pattern.compare(0, filter_pattern.length(), argv[i],
@@ -385,9 +409,12 @@ void parse_command_line(int argc, char **argv, int &color_space, int &filter, in
                 cout << "Missing value for parameter " << filter_pattern;
                 cout << ". See --help." << endl;
                 is_missing_parameter = true;
-
-            } else {
+            } else if (is_number(argv[i])) {
                 filter = atoi(argv[i]);
+            } else {
+                cout << "Missing value for parameter " << filter_pattern;
+                cout << ". See --help." << endl;
+                is_missing_parameter = true;
             }
 
         } else if (input_video_pattern.compare(0, input_video_pattern.length(), argv[i],
@@ -398,7 +425,6 @@ void parse_command_line(int argc, char **argv, int &color_space, int &filter, in
                 cout << "Missing value for parameter " << input_video_pattern;
                 cout << ". See --help." << endl;
                 is_missing_parameter = true;
-
             } else {
                 input_video = string(argv[i]);
             }
