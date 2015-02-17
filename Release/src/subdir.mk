@@ -4,19 +4,19 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../src/VisualRhythm.cpp \
-../src/Main.cpp \
-../src/Video.cpp 
+../src/visualrhythm.cpp \
+../src/main.cpp \
+../src/video.cpp 
 
 OBJS += \
-./src/VisualRhythm.o \
-./src/Main.o \
-./src/Video.o 
+./src/visualrhythm.o \
+./src/main.o \
+./src/video.o 
 
 CPP_DEPS += \
-./src/VisualRhythm.d \
-./src/Main.d \
-./src/Video.d 
+./src/visualrhythm.d \
+./src/main.d \
+./src/video.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

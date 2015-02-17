@@ -31,47 +31,55 @@ First command line remove old binaries, and the second command builds a new bina
 
 This software run only by command line interfaces (CLIs) such as the shell program (e.g., sh, bash, ksh). We provide the following parameters to the users that can be setted by the command line:
 
-* visual_rhythm_type: Integer between 0 and 2 that indicates the type of visual rhythm to be computed from input video (default=0) **\<required\>**. Use:
+* color_space: Integer between 0 and 1 that indicates the color space used to load the video frames (default=0). Use:
+    + 0: To load the frames in grayscale;
+    + 1: To load the frames in the *L*ab color space;
+
+* filter: Integer between 0 and 1 that indicates the type of filter used to compute the residual noise video (default=0). Use:
+    + 0: To use a median filter;
+    + 1: To use a gaussian filter.
+
+* frame_number: Positive integer that indicates the number of consecutive frames used during computation of the visual rhythm (default=50).
+
+* input_video: Filename of the input video to be computed the visual rhythm  **\<required\>**.
+
+* kernel_size: Positive odd integer that indicates the size of the kernel used during filtering of the input video (default=7).
+
+* output_image: Filename of the computed visual rhythm. Visual rhythm is saved as PNG image file **\<required\>**.
+
+* roi_width: Positive integer that indicates the width of the region of interesting extracted of each frames (default=30).
+
+* variance: Float that indicates the variance of the Gaussian filter (default=2).
+
+* visual_rhythm_type: Integer between 0 and 2 that indicates the type of visual rhythm to be computed from input video **\<required\>**. Use:
     + 0: To compute a vertical visual rhythm;
     + 1: To compute a horizontal visual rhythm;
     + 2: To compute a zig-zag visual rhythm.
-* frame_number: Integer that indicates the number of frames used during computation of the visual rhythm, and that the frames are taken in sequence (default=50).
-* color_space: String that indicates the color space used to load the video frames (default=gray). Use:
-    + gray: To load the frames in grayscale;
-    + lab: To load the frames in the *L*ab color space;
-* roi_width: Integer that indicates the width of the region of interesting extracted of each frames (default=30).
-* filter: String that indicates the type of filter used to compute the residual noise video from the input video (default=gauss). Use:
-    + gauss to use a gaussian filter;
-    + median to use a median filter.
-* kernel_size: Integer that indicates the size of the kernel used during filtering from the input video (default=3).
-* variance: Float that indicates the variance of the kernel used during gaussian filtering from the input video (default=2).
-* input_video: String that indicates the file name of the input video to be computed the visual rhythm **\<required\>**.
-* output_image: String that indicates the file name where the extracted visual rhythm will be saved. The visual rhythms are saved as PNG image file **\<required\>**.
 
-> P.S.: The parameters must be pass using a - before the name parameter followed by blanck space and the value to be setted (e.g., -visual_rhythm_type 0, -frame_number 50).
+> P.S.: The parameters must be setted using a hyphen (-) before the name of the parameter followed by blanck space and their value (e.g., -visual_rhythm_type 0, -frame_number 50).
 
 ### Examples
 
 For run the sofware the user must be the follow parameters:
 
-1. Compute the *__vertical__ visual rhythm* of an input video (data/testcase1.avi) using default value parameters:
+1. Compute the *__vertical__ visual rhythm* of an input video (EXAMPLE/data/testcase1.avi) using default value parameters:
 >     
->     ./Release/VisualRhythmAntiSpoofing -visual_rhythm_type 0 -input_video data/testcase1.avi -output_image output/visualrhythm/vertical/testcase1.png
->     
-
-2. Compute the *__vertical__ visual rhythm* (-visual_rhythm_type 0) from first 2 seconds (-frame_number 50) of an input video (data/testcase2.avi):
->     
->     ./Release/VisualRhythmAntiSpoofing -visual_rhythm_type 0 -frame_number 50 -color_space gray -roi_width 30 -filter gauss -kernel_size 3 -variance 2 -input_video data/testcase2.avi -output_image output/visualrhythm/vertical/testcase2.png
+>     ./Release/VisualRhythmAntiSpoofing -visual_rhythm_type 0 -input_video EXAMPLE/data/testcase1.avi -output_image EXAMPLE/output/visualrhythm/vertical/testcase1.png
 >     
 
-3. Compute the *__horizontal__ visual rhythm* (-visual_rhythm_type 1) from first 2 seconds (-frame_number 50) of an input video (data/testcase3.avi):
+2. Compute the *__vertical__ visual rhythm* (-visual_rhythm_type 0) from first 2 seconds (-frame_number 50) of an input video (EXAMPLE/data/testcase2.avi):
 >     
->     ./Release/VisualRhythmAntiSpoofing -visual_rhythm_type 1 -frame_number 50 -color_space gray -roi_width 30 -filter gauss -kernel_size 3 -variance 2 -input_video data/testcase3.avi -output_image output/visualrhythm/vertical/testcase3.png
+>     ./Release/VisualRhythmAntiSpoofing -visual_rhythm_type 0 -frame_number 50 -color_space gray -roi_width 30 -filter gauss -kernel_size 3 -variance 2 -input_video EXAMPLE/data/testcase2.avi -output_image EXAMPLE/output/visualrhythm/vertical/testcase2.png
 >     
 
-4. Compute the *__zig-zag__ visual rhythm* (-visual_rhythm_type 2) from first 2 seconds (-frame_number 50) of an input video (data/testcase1.avi):
+3. Compute the *__horizontal__ visual rhythm* (-visual_rhythm_type 1) from first 2 seconds (-frame_number 50) of an input video (EXAMPLE/data/testcase3.avi):
 >     
->     ./Release/VisualRhythmAntiSpoofing -visual_rhythm_type 2 -frame_number 50 -color_space gray -roi_width 30 -filter gauss -kernel_size 3 -variance 2 -input_video data/testcase1.avi -output_image output/visualrhythm/vertical/testcase1.png
+>     ./Release/VisualRhythmAntiSpoofing -visual_rhythm_type 1 -frame_number 50 -color_space gray -roi_width 30 -filter gauss -kernel_size 3 -variance 2 -input_video EXAMPLE/data/testcase3.avi -output_image EXAMPLE/output/visualrhythm/vertical/testcase3.png
+>     
+
+4. Compute the *__zig-zag__ visual rhythm* (-visual_rhythm_type 2) from first 2 seconds (-frame_number 50) of an input video (EXAMPLE/data/testcase1.avi):
+>     
+>     ./Release/VisualRhythmAntiSpoofing -visual_rhythm_type 2 -frame_number 50 -color_space gray -roi_width 30 -filter gauss -kernel_size 3 -variance 2 -input_video EXAMPLE/data/testcase1.avi -output_image EXAMPLE/output/visualrhythm/vertical/testcase1.png
 >     
 
 ### Please, Cite our Work!
