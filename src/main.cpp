@@ -33,26 +33,21 @@
 #include <sys/stat.h>
 #include <errno.h>
 
-
-bool is_number(const std::string& s)
-{
-    std::string::const_iterator it = s.begin();
-    while (it != s.end() && std::isdigit(*it)) ++it;
-    return !s.empty() && it == s.end();
-}
-
 void compute_visual_rhythm(int color_space, int filter, int frame_number, string input_video,
-  int kernel_size, string output_image, int roi_width, float variance, int visual_rhythm_type);
+  int kernel_size, string output_image, int roi_width, float variance,
+  int visual_rhythm_type);
 
-int create_path(std::string s, mode_t mode);
+int create_path(string str, mode_t mode);
 
 void help(string filename);
 
-void parse_command_line(int argc, char **argv, int &color_space, int &filter, int &frame_number,
-  string &input_video, int &kernel_size, string &output_image, int &roi_width, float &variance,
-  int &visual_rhythm_type);
+bool is_number(string str);
 
-void split_filename(const string& str, string& path, string& file, string& extension);
+void parse_command_line(int argc, char **argv, int &color_space, int &filter, int &frame_number,
+  string &input_video, int &kernel_size, string &output_image, int &roi_width,
+  float &variance, int &visual_rhythm_type);
+
+void split_filename(string str, string &path, string &file, string &extension);
 
 bool verify_command_line(int color_space, int filter, int frame_number, string input_video,
   int kernel_size, string &output_image, int roi_width, float variance, int visual_rhythm_type);
@@ -104,8 +99,9 @@ int main(int argc, char** argv) {
     return 0;
 }
 
-void compute_visual_rhythm(int color_space, int filter, int frame_number, string input_video,
-  int kernel_size, string output_image, int roi_width, float variance, int visual_rhythm_type) {
+void compute_visual_rhythm(int color_space, int filter, int frame_number, 
+  string input_video, int kernel_size, string output_image, int roi_width,
+  float variance, int visual_rhythm_type) {
 
     //Object liable for control of the video
     Video processor;
@@ -136,7 +132,6 @@ void compute_visual_rhythm(int color_space, int filter, int frame_number, string
         cout << "Saving the generated visual rhythm ... ";
         visual_rhythm.save_visual_rhythm();
         cout << "Ok!" << endl;
-
     } else if (visual_rhythm_type == 1) {
         cout << "Extracting horizontal visual rhythm ... ";
 
@@ -149,7 +144,6 @@ void compute_visual_rhythm(int color_space, int filter, int frame_number, string
         cout << "Saving the generated visual rhythm ... ";
         visual_rhythm.save_visual_rhythm();
         cout << "Ok!" << endl;
-
     } else if (visual_rhythm_type == 2) {
         cout << "Extracting zig-zag visual rhythm ... ";
 
@@ -165,7 +159,6 @@ void compute_visual_rhythm(int color_space, int filter, int frame_number, string
         cout << "Saving the generated visual rhythm ... ";
         visual_rhythm.save_visual_rhythm();
         cout << "Ok!" << endl;
-
     } else {
         cout << "Invalid type for visual rhythm!";
         exit(EXIT_FAILURE);
@@ -174,24 +167,24 @@ void compute_visual_rhythm(int color_space, int filter, int frame_number, string
     cout << "Done!\n" << endl;
 }
 
-int create_path(std::string s,mode_t mode){
-    size_t pre=0,pos;
-    std::string dir;
+int create_path(string str, mode_t mode){
+    size_t pre = 0, pos;
+    string dir;
     int mdret;
 
-    if (s[s.size()-1]!='/') {
-        s+='/';
+    if (str[str.size()-1]!='/') {
+        str += '/';
     }
 
-    while ((pos=s.find_first_of('/',pre))!=std::string::npos) {
-        dir=s.substr(0,pos++);
-        pre=pos;
+    while ((pos = str.find_first_of('/', pre)) != string::npos) {
+        dir = str.substr(0, pos++);
+        pre = pos;
 
         if (dir.size() == 0) {
             continue;
         }
 
-        if ((mdret=mkdir(dir.c_str(),mode)) && errno!=EEXIST) {
+        if ((mdret = mkdir(dir.c_str(), mode)) && errno != EEXIST) {
             return mdret;
         }
     }
@@ -200,6 +193,7 @@ int create_path(std::string s,mode_t mode){
 }
 
 void help(string filename){
+
     string path = "";
     string program_name = "";
     string extension = "";
@@ -268,9 +262,19 @@ void help(string filename){
 
 }
 
+bool is_number(string str) {
+    string::const_iterator it = str.begin();
+
+    while (it != str.end() && isdigit(*it)){
+        ++it;
+    }
+
+    return !str.empty() && it == str.end();
+}
+
 void parse_command_line(int argc, char **argv, int &color_space, int &filter, int &frame_number,
-  string &input_video, int &kernel_size, string &output_image, int &roi_width, float &variance,
-  int &visual_rhythm_type) {
+  string &input_video, int &kernel_size, string &output_image, int &roi_width,
+  float &variance, int &visual_rhythm_type) {
 
     int i = 1;
     bool is_missing_parameter = false;
@@ -444,7 +448,6 @@ void parse_command_line(int argc, char **argv, int &color_space, int &filter, in
     if (!is_missing_parameter){
         is_missing_parameter = verify_command_line(color_space, filter, frame_number, input_video,
           kernel_size, output_image, roi_width, variance, visual_rhythm_type);
-
     }
 
     if (is_missing_parameter) {
@@ -453,7 +456,7 @@ void parse_command_line(int argc, char **argv, int &color_space, int &filter, in
 
 }
 
-void split_filename(const string& str, string& path, string& file, string& extension) {
+void split_filename(string str, string &path, string &file, string &extension) {
 
     size_t found = str.find_last_of("/\\");
     size_t last_dot = str.find_last_of(".");
