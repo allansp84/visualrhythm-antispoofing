@@ -88,24 +88,24 @@ If you use this software, please cite our paper published in *IEEE Transactions 
 
 > **Reference**
 >
->     Pinto, A.; Schwartz, W.; Pedrini, H.; Rocha, A., "Using Visual Rhythms for Detecting Video-based Facial Spoof Attacks," Information Forensics and Security, IEEE Transactions on , vol.PP, no.99, pp.1,1
+>     Pinto, A.; Schwartz, W.R.; Pedrini, H.; Rocha, A.d.R., "Using Visual Rhythms for Detecting Video-Based Facial Spoof Attacks," Information Forensics and Security, IEEE Transactions on , vol.10, no.5, pp.1025,1038, May 2015
 >     doi: 10.1109/TIFS.2015.2395139
->     keywords: {Authentication;Biometrics (access control);Databases;Face;Feature extraction;Histograms;Noise;Unicamp Video-Attack Database;Video-based Face Spoofing;Visual Rhythm, Video-based Attacks},
->     URL: http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7017526&isnumber=4358835
+>     keywords: {Authentication;Biometrics (access control);Databases;Face;Feature extraction;Histograms;Noise;Unicamp Video-Attack Database;Video-based Face Spoofing;Video-based face spoofing;Visual Rhythm, Video-based Attacks;impersonation detection in facial biometric systems;unicamp video-attack database;video-based attacks;visual rhythm},
+>     URL: http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7017526&isnumber=7073680
 
 
 > **Bibtex**
 >
 >     @ARTICLE{7017526,
->     author={Pinto, A. and Schwartz, W. and Pedrini, H. and Rocha, A.},
+>     author={Pinto, A. and Schwartz, W.R. and Pedrini, H. and Rocha, A.},
 >     journal={Information Forensics and Security, IEEE Transactions on},
->     title={Using Visual Rhythms for Detecting Video-based Facial Spoof Attacks},
+>     title={Using Visual Rhythms for Detecting Video-Based Facial Spoof Attacks},
 >     year={2015},
->     month={},
->     volume={PP},
->     number={99},
->     pages={1-1},
->     keywords={Authentication;Biometrics (access control);Databases;Face;Feature extraction;Histograms;Noise;Unicamp Video-Attack Database;Video-based Face Spoofing;Visual Rhythm, Video-based Attacks},
+>     month={May},
+>     volume={10},
+>     number={5},
+>     pages={1025-1038},
+>     keywords={Authentication;Biometrics (access control);Databases;Face;Feature extraction;Histograms;Noise;Unicamp Video-Attack Database;Video-based Face Spoofing;Video-based face spoofing;Visual Rhythm, Video-based Attacks;impersonation detection in facial biometric systems;unicamp video-attack database;video-based attacks;visual rhythm},
 >     doi={10.1109/TIFS.2015.2395139},
 >     ISSN={1556-6013},}
 
