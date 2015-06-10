@@ -63,6 +63,10 @@ void VisualRhythm::set_filter(int filter) {
     this->filter = filter;
 }
 
+void VisualRhythm::set_kernel_size(int kernel_size) {
+    this->kernel_size = kernel_size;
+}
+
 void VisualRhythm::set_variance(float variance) {
     this->variance = variance;
 }

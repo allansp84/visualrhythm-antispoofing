@@ -6,19 +6,19 @@ This program compute the noise information contained in a input video and their 
 
 ### Requirements
 
-The OpenCV Package 2.4.8 or later is required for use this software. This software runs on Linux Operating systems, and we tested it by using Ubuntu 14.04 LTS.
+The OpenCV Package 2.4.10 or later is required for use this software. This software runs on Linux Operating systems, and we tested it by using Ubuntu 14.04 LTS.
 
 ### Compiling and Running this Software
 
 To compile this software the use needs set the variables defined in [opencv.inc](https://github.com/allansp84/visualrhythm-antispoofing/blob/master/Release/opencv.inc):
 
-    OPENCVFLAGS = -I/path/to/include/opencv
+    OPENCVFLAGS = -I/path/to/include
     OPENCVLIBS = -L/path/to/lib
 
-For example, suppose you have installed Opencv Package in the **/home/user/local**, then the OPENCVFLAGS and OPENCVLIBS variables should be set as:
+For example, suppose you have installed Opencv Package in the **/home/user/local/opencv-2.4.10**, then the OPENCVFLAGS and OPENCVLIBS variables should be set as:
 
-    OPENCVFLAGS = -I/home/user/local/include/opencv
-    OPENCVLIBS = -L/home/user/local/lib
+    OPENCVFLAGS = -I/home/user/local/opencv-2.4.10/include
+    OPENCVLIBS = -L/home/user/local/opencv-2.4.10/lib
 
 After set the variables into ./Release/opencv.inc, the user must be run the follows commands to compile the source code:
 

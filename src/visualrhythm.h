@@ -132,6 +132,9 @@ public:
     // To set the type of the filter used to compute the residual noise images
     void set_filter(int filter);
 
+    // To set the kernel size of the filter used to compute the residual noise images
+    void set_kernel_size(int filter);
+
     // To set the variance value used in the gaussian filter
     void set_variance(float variance);
 

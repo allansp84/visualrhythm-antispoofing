@@ -116,6 +116,7 @@ void compute_visual_rhythm(int color_space, int filter, int frame_number,
     visual_rhythm.set_visual_rhythm_type(visual_rhythm_type);
     visual_rhythm.set_color_space(color_space);
     visual_rhythm.set_filter(filter);
+    visual_rhythm.set_kernel_size(kernel_size);
     visual_rhythm.set_variance(variance);
     visual_rhythm.set_width(roi_width);
     visual_rhythm.set_output_filename(output_image.c_str());
@@ -320,7 +321,7 @@ void parse_command_line(int argc, char **argv, int &color_space, int &filter, in
             } else if (is_number(argv[i])) {
                 roi_width = atoi(argv[i]);
             } else {
-                cout << "Missing value for parameter " << kernel_size_pattern;
+                cout << "Missing value for parameter " << roi_width_pattern;
                 cout << ". See --help." << endl;
                 is_missing_parameter = true;
             }
@@ -352,7 +353,7 @@ void parse_command_line(int argc, char **argv, int &color_space, int &filter, in
             } else if (is_number(argv[i])) {
                 variance = atof(argv[i]);
             } else {
-                cout << "Missing value for parameter " << kernel_size_pattern;
+                cout << "Missing value for parameter " << variance_pattern;
                 cout << ". See --help." << endl;
                 is_missing_parameter = true;
             }
