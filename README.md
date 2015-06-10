@@ -6,7 +6,7 @@ This program compute the noise information contained in a input video and their 
 
 ### Requirements
 
-The OpenCV Package 2.4.10 or later is required for use this software. This software runs on Linux Operating systems, and we tested it by using Ubuntu 14.04 LTS.
+The OpenCV Package 2.4.10 or later is required for use this software. This software runs on Linux Operating systems, and we tested it by using Ubuntu 14.04 LTS and Debian 8.
 
 ### Compiling and Running this Software
 
