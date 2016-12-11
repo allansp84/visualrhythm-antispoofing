@@ -1,38 +1,19 @@
-#-t -w -c testeParams.txt -m learnedAllRaw -n F:\data\Human_Detection\INRIA\TriggsDatabase_32_64\train\neg -p #F:\data\Human_Detection\INRIA\TriggsDatabase_32_64\train\pos
-
 ModelID <FullBody32x64CoocHOGRawFeatures>
 
-#method <HOG,HOG,0,HOGPARAM>
-#method <HSC,HSC,0,HSCPARAM>
-#method <COOCH,COOC,1,COOCPARAM>
-#method <COOCS,COOC,1,COOCPARAM>
 method <COOCV,COOC,1,COOCPARAM>
 
 classifier <plsReg>
-#classifier <regression>
 
 # detection window size
 window <1500,1366>
-#window <64,64>
-#window <96,96>
-#window <128,128>
-#window <32,32>
 
 # object location inside the detection window <x0, y0, w, h>
 object <0,0,1500,1366>
-#object <0,0,64,64>
-#object <0,0,96,96>
-#object <0,0,128,128>
-#object <0,0,32,32>
 
 factors <20>
 
 # list of regions
 region <0,0,1499,1365>
-#region <0,0,63,63>
-#region <0,0,95,95>
-#region <0,0,127,127>
-#region <0,0,31,31>
 
 params <COOCPARAM,bins,16>
 params <COOCPARAM,distance,1>
@@ -48,59 +29,13 @@ params <HSCPARAM,norient,8>
 params <HSCPARAM,normalization,global>
 params <HSCPARAM,useCell,true>
 
-# HOG blocks
-#block <HOG,12,12,4,4,5>
-#block <HOG,24,12,6,4,5>
-#block <HOG,16,16,4,4,5>
-#block <HOG,32,16,8,4,5>
-#block <HOG,20,20,6,6,5>
-#block <HOG,40,20,8,6,5>
-#block <HOG,24,24,6,6,5>
-#block <HOG,48,24,8,6,5>
-#block <HOG,12,24,4,6,5>
-#block <HOG,28,28,8,8,5>
-#block <HOG,56,28,8,8,5>
-#block <HOG,32,32,8,8,5>
-#block <HOG,64,32,8,8,5>
-#block <HOG,16,32,4,8,5>
-#block <HOG,36,36,8,8,5>
-#block <HOG,40,40,8,8,5>
-#block <HOG,20,40,6,8,5>
-#block <HOG,44,44,8,8,5>
-#block <HOG,48,48,8,8,5>
-#block <HOG,24,48,6,8,5>
-#block <HOG,52,52,8,8,5>
-#block <HOG,56,56,8,8,5>
-#block <HOG,28,56,8,8,5>
-#block <HOG,60,60,8,8,5>
-#block <HOG,64,64,8,8,5>
-#block <HOG,32,64,8,8,5>
-#block <HOG,36,72,8,8,5>
-#block <HOG,40,80,8,8,5>
-#block <HOG,44,88,8,8,5>
-#block <HOG,48,96,8,8,5>
-#block <HOG,52,104,8,8,5>
-#block <HOG,56,112,8,8,5>
-#block <HOG,60,120,8,8,5>
-#block <HOG,64,128,8,8,5>
-#block <HOG,16,16,16,16,5>
-#block <HOG,85,110,85,110,5>
-#block <HOG,32,32,8,8,5>
-
 # HOG
-#block <HOG,16,16,4,4,5>
-#block <HOG,32,32,8,8,5>
 block <HOG,1500,1366,128,128,5>
 
 
 # co-occurrence blocks
-#block <COOC,16,16,8,8,5>
-#block <COOC,32,32,8,8,5>
 block <COOC,1500,1366,128,128,5>
 
 # HSC
-#block <HSC,85,110,85,110,5>
 block <HSC,16,16,4,4,5>
 block <HSC,32,32,8,8,5>
-
-##
